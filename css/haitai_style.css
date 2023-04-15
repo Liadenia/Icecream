@@ -619,12 +619,12 @@ width:580px; height:300px;
 }
 #event_info>.event_container>.right_content>.event_banner{
 	width:412px; height:326px;
-	border:2px solid #333;
+	border:2px dashed #8cddff;
 	border-radius:30px;
-	margin-bottom:30px;
+	margin-bottom:28px;
 }
 #event_info>.event_container>.right_content>.information{
-	width:410px; height:324px;
+	width:412px; height:322px;
 	box-sizing:border-box;
 	border:1px solid #ED3D91;
 	border-radius:30px;
@@ -632,6 +632,7 @@ width:580px; height:300px;
 	font-size:24px;
 	line-height:24px;
 	padding:20px;
+	margin: 0 auto;
 }
 #event_info>.event_container>.right_content>.information>h3{
 	font-weight:bold;
