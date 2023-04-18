@@ -72,7 +72,7 @@ body{ font-family:"맑은 고딕", sans-serif; overflow-x:hidden;}
 	line-height:35px;
 	margin-top:60px;
 	position:relative;
-    z-index:999999;
+   z-index:999999;
 }
 #main_header>.gnb>ul>li{
 	width:240px; height:34px;
@@ -563,7 +563,7 @@ width:580px; height:300px;
 #event_info>.event_container>.content>.wrap>.news_wrapper>.news_box>.info_txt{
 	width:356px; height:162px;
 	margin-left:270px;
-    margin-top:45px;
+   margin-top:45px;
 	text-align:left;
 }
 #event_info>.event_container>.content>.wrap>.news_wrapper>.news_box>.info_txt>h3{
@@ -784,6 +784,9 @@ width:580px; height:300px;
 @media screen and ( max-width:640px ){
 	.mobile{ display:block; }
 	.desktop{ display:none; }
+	body{
+		overflow-x: hidden
+	}
 	#main_header{
 		width:100%;  height:75px; 
 		background:url("../img/mobile_color.png") no-repeat;
@@ -815,7 +818,7 @@ width:580px; height:300px;
 	#main_header>.tnb>.toggle_btn{
 		display:block;
 		border:0px;
-        background:transparent;
+      background:transparent;
 		margin: 10px 20px 0px 0px;
 		width:25px; height:25px;
 		cursor:pointer;
@@ -901,17 +904,20 @@ width:580px; height:300px;
 		padding:5px;
 	}
 
-	#sub_slides{ padding:10px;}
+	#sub_slides{
+		padding:10px;
+		width: 100%;
+	}
 	#sub_slides>.icecream{
-		width:360px; height:330px;
+		width:100%; height:230px;
 		margin:0px auto;
 	}
 	#sub_slides>.icecream>ul{
-		width:390px; height:350px;
+		width:50px; height:350px;
 		margin:0px auto;
 	}
 	#sub_slides>.icecream>ul>li{
-		width:110px; height:110px;
+		width:100px; height:100px;
 		/* float:left; */
 		margin:10px 0px 10px 10px;
 		border-radius:30px;
@@ -919,16 +925,24 @@ width:580px; height:300px;
       justify-content: center;
       align-items: center;
 	}
-	#sub_slides>.icecream>ul>li>img{
-		width:300px;
-		height:310px;
-		margin:5px auto;
-	}
+
 	#sub_slides>.icecream>ul>li:nth-child(1){
 		margin-left:0px;
 	}
 	#sub_slides>.icecream>ul>li:nth-child(4){
 		margin-left:0px;
+	}
+
+	#sub_slides>.icecream>ul>li>img{
+		width:100px;
+		height: auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	#sub_slides>.icecream>ul>.height>img{
+		/* height: 300px; */
+		width: 100px;
 	}
 
 	#recipe{
@@ -946,16 +960,50 @@ width:580px; height:300px;
 	}
 
 	#recipe>.recipe_info{
-		width:260px; height:306px;
+		width:300px; height:auto;
 		margin:0px auto;
+		overflow: hidden;
 	}
+	#recipe>.recipe_info>ul{
+		width:2000px;
+	}
+	#recipe>.recipe_info>ul>li{
+		float:left;
+		margin: 0px auto;
+		position: relative;
+	}
+	#recipe>.recipe_info>ul>li>img{
+		width: 300px;
+		height: 300px;
+		box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.25);
+	}
+	#recipe>.recipe_info>ul>li>div{
+		width: 300px;
+		height: 60px;
+		position: absolute;
+		background: #fff;
+		display: inline-block;
+		bottom: 0;
+		text-align: center;
+		line-height: 30px;
+		padding-top: 20px;
+		border-radius: 60px 60px 0 0;
+		box-shadow: 3px 0px 3px rgba(0, 0, 0, 0.25);
+	}
+
+
 	#recipe>.recipe_sns{
-		width:360px; height:164px;
+		width:162px; height:164px;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+	#recipe>.recipe_sns>ul>li{
+		margin: 0 auto;
 	}
 	#recipe>.recipe_sns>ul>li>img{
 		width:160px; height:160px;
 		border-radius:30px;
-		margin-left:15px;
+		margin: 0 auto;
 	}
 	#recipe>.recipe_sns>ul>li>img:hover{
 		border:2px solid #00b2ff;
@@ -1039,14 +1087,14 @@ width:580px; height:300px;
 		left:0px;
 	}
 	#event_info>h2{
-		width:100%; height:25px;
+		width:80%; height:25px;
 		font-size:23px;
 		margin:0px auto;
 		line-height:25px;
 		padding-top:50px;
 	}
 	#event_info>h2>span{
-		width:25px; height:25px;
+		width:20px; height:20px;
 		display:block;
 		float:left;
 	}
@@ -1064,19 +1112,19 @@ width:580px; height:300px;
 		width:100%; height:auto;
 	}
 	#event_info>.info_scr>.info_btn>h4{
-		width:50px; height:30px;
-		font-size:18px;
+		width:50px; height:25px;
+		font-size:16px;
 		line-height:30px;
 	}
 	#event_info>.info_scr>.info_btn>.info_title{
 		width:100%; height:auto;
-		font-size:18px;
+		font-size:14px;
 		margin-left:70px;
 	}
 
-	
 	#event_info>.event_container{
 		width:100%; height:auto;
+		margin: 0 auto;
 	}
 	#event_info>.event_container>.content{
 		width:100%; height:265px;
@@ -1094,7 +1142,7 @@ width:580px; height:300px;
 		margin:0px auto;
 	}
 	#event_info>.event_container>.content>.wrap>.news_wrapper>.news_box{
-		width:90%; height:auto;
+		width:85%; height:auto;
 		border:10px solid #fff4f9;
 		border-radius:15px;
 		margin-bottom:20px;
@@ -1133,11 +1181,13 @@ width:580px; height:300px;
 		float:right; 
 		right:40px;
 		margin-top:15px;
+		display: none;
 	}
 	#event_info>.event_container>.content>.control_bar>.ctr_btn{
 		width:10px; height:10px;
 		left:-4px; top:20px;
 		float: right;
+		display: none;
 	}
 
 	#event_info>.event_container>.right_content{
@@ -1147,10 +1197,13 @@ width:580px; height:300px;
 	}
 	#event_info>.event_container>.right_content>.event_banner{
 		width:90%; height:auto;
-		border:1px solid #333;
+		border:2px dashed #8cddff;
 		border-radius:15px;
 		margin:0px auto;
 		margin-bottom:20px;
+	}
+	#event_info>.event_container>.right_content>.event_banner>img{
+		width: 100%;
 	}
 	#event_info>.event_container>.right_content>.information{
 		width:90%; height:auto;
@@ -1195,24 +1248,29 @@ width:580px; height:300px;
 		width:260px; height:auto;
 		float:right;
 		padding:20px;
-		margin:40px 50px auto;
+		margin:40px auto;
 		overflow:hidden;
 	}
 	#main_footer>.footer_bottom{
 		width:100%; height:auto;
-		padding-bottom:30px;
+		padding-bottom:20px;
+		margin-top: 80px;
 	}
 	#main_footer>.footer_bottom>.footer_txt{
-		margin:0px auto;
+		margin:20px auto;
 		text-align:center;
 		display:block;
 	}
 	#main_footer>.footer_bottom>.footer_txt>h4{
 		font-size:15px;
+		margin: 0px auto;
+		width: 120px;
+		display: block;
 	}
 	#main_footer>.footer_bottom>.footer_txt>address{
 		font-size:12px;
-		padding-bottom:30px;
+		padding:20px 0 35px 0;
+		margin: 0 auto;
 	}
 	#main_footer>.footer_bottom>.footer_txt>p{
 		font-size:8px;
