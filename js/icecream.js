@@ -22,6 +22,8 @@ newsWrapper.addEventListener('scroll', function() {
 // ----------------------------swiper js-----
 
 var swiper = new Swiper(".mySwiper", {
+  slidesPerGroup: 1,
+  slidesPerView: 5,
   autoHeight: false,
   centeredSlides: true,
   spaceBetween: 20,
@@ -37,10 +39,18 @@ var swiper = new Swiper(".mySwiper", {
   },
   breakpoint: {
     640:{
-      slidesPerView: 2,
-      spaceBetween: 10,
+      slidesPerView: 5,
+      spaceBetween: 0,
+      centeredSlides: false,
       autoplay: {
         delay: 3000,
+      }
+    },
+    1024:{
+      slidesPerView: 1,
+      spaceBetween: 0,
+      autoplay: {
+        delay: 1500,
       }
     },
   },
